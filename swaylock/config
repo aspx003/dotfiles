@@ -1,0 +1,54 @@
+# Swaylock: deep dusk blue + pale sky (matches waybar / wofi)
+
+# Background (comment out "image" for a plain color)
+color=1d2740
+image=/home/ansupatra/Downloads/wallpaper.jpg
+scaling=fill
+
+daemonize
+ignore-empty-password
+show-failed-attempts
+indicator-caps-lock
+
+# Font
+font=JetBrains Mono NL
+font-size=20
+
+# Indicator shape
+indicator-radius=90
+indicator-thickness=8
+
+# Inside of the circle
+inside-color=1d2740e6
+inside-clear-color=1d2740e6
+inside-caps-lock-color=1d2740e6
+inside-ver-color=1d2740e6
+inside-wrong-color=1d2740e6
+
+# Ring (dim when idle, full accent while verifying / on error)
+ring-color=c9dcff4d
+ring-clear-color=c9dcff80
+ring-caps-lock-color=c9dcff80
+ring-ver-color=c9dcff
+ring-wrong-color=c9dcff
+
+# Key press and backspace highlights on the ring
+key-hl-color=c9dcff
+bs-hl-color=c9dcff80
+caps-lock-key-hl-color=c9dcff
+caps-lock-bs-hl-color=c9dcff80
+
+# Remove extra lines and borders
+line-color=00000000
+line-clear-color=00000000
+line-caps-lock-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+separator-color=00000000
+
+# Text inside the circle
+text-color=c9dcff
+text-clear-color=c9dcff
+text-caps-lock-color=c9dcff
+text-ver-color=c9dcff
+text-wrong-color=c9dcff

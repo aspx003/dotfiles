@@ -1,0 +1,26 @@
+[window]
+dynamic_padding = false
+opacity = 0.9
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "JetBrains Mono NL"
+style = "Heavy"
+
+[font.bold_italic]
+family = "JetBrains Mono NL"
+style = "Heavy Italic"
+
+[font.italic]
+family = "JetBrains Mono NL"
+style = "Medium Italic"
+
+[font.normal]
+family = "JetBrains Mono NL"
+style = "Medium"

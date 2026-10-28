@@ -1,0 +1,97 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 0,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "backlight",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "bluetooth",
+    "network",
+    "battery",
+  ],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "format": "{name}",
+  },
+  "sway/window": {
+    "format": "{title}",
+    "max-length": 50,
+    "tooltip": false,
+  },
+  "clock": {
+    "format": "{:%a %d %b  %I:%M %p}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "\uf4bc {usage}%",
+  },
+  "memory": {
+    "interval": 20,
+    "format": "\ue266 {used:0.01f}/{total} GB",
+    "unit": "GB",
+  },
+  "bluetooth": {
+    "format": "\udb80\udcaf on",
+    "format-connected": "\udb80\udcb1 {device_alias}",
+    "format-off": "\udb80\udcb2 off",
+    "format-disabled": "\udb80\udcb2 off",
+    "tooltip-format": "{controller_alias}  {controller_address}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}  {device_address}",
+    "on-click": "alacritty --class waybar-panel -e bluetuith",
+    "on-click-right": "rfkill toggle bluetooth",
+  },
+  "network": {
+    "interval": 5,
+    "format-wifi": "\uf1eb  {essid}",
+    "format-ethernet": "\udb80\udf17 {ipaddr}",
+    "format-disconnected": "WIFI off",
+    "on-click": "alacritty --class=waybar-panel -e /home/ansupatra/.cargo/bin/impala",
+    "tooltip-format": "{ifname}  {ipaddr}\n↑ {bandwidthUpBytes}  ↓ {bandwidthDownBytes}",
+  },
+  "backlight": {
+    "format": "\udb80\udcde  {percent}%",
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "tooltip": false,
+  },
+  "pulseaudio": {
+    "format": "\udb81\udd7e  {volume}%",
+    "format-muted": "\udb81\udd81  muted",
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "tooltip-format": "{desc}",
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% \udb80\udc84",
+    "format-plugged": "{capacity}% \udb81\udea5",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "\uf244",
+      "\uf243",
+      "\uf242",
+      "\uf241",
+      "\uf240"
+    ],
+  },
+}
